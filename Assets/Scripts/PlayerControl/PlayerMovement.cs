@@ -48,6 +48,11 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearDamping = 0f;
         }
+
+        if (grounded)
+        {
+            Debug.Log("Toimii");
+        }
     }
 
     private void FixedUpdate()
@@ -92,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         if(flatVel.magnitude > moveSpeed)
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
-            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z); 
+            rb.linearVelocity = new Vector3(limitedVel.x, rb.linearVelocity.y, limitedVel.z);
         }
     }
 

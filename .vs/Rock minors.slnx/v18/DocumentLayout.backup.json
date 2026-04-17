@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Arvi\\Rock minors\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\arvi\\rock minors\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\arvi\\rock minors\\assets\\scripts\\playercontrol\\mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol\\mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\arvi\\rock minors\\assets\\scripts\\blocks\\blockbreaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blocks\\blockbreaker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\arvi\\rock minors\\assets\\scripts\\playercontrol\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|c:\\users\\arvi\\rock minors\\assets\\scripts\\playercontrol\\cameracontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol\\cameracontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA4AAAAXAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BlockBreaker.cs",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\Blocks\\BlockBreaker.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Blocks\\BlockBreaker.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\Blocks\\BlockBreaker.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Blocks\\BlockBreaker.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-14T10:18:56.085Z",
+              "WhenOpened": "2026-04-16T09:10:12.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAmwDAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T06:09:46.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CameraControl.cs",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T06:04:04.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MouseControl.cs",
+              "DocumentMoniker": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "ToolTip": "C:\\Users\\Arvi\\Rock minors\\Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwB4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T05:54:51.163Z",
               "EditorCaption": ""
             }
           ]

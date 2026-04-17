@@ -18,8 +18,12 @@ public class BlockBreaker : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit ,breakDistance)) {
-            Destroy(hit.collider.gameObject);
+        if (Physics.Raycast(ray, out hit, breakDistance)) {
+            if (hit.collider.CompareTag("Block"))
+            {
+                Destroy(hit.collider.gameObject);
+            }
+
         }
     }
 }
