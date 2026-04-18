@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
-    public Transform groundCheck;
 
     [SerializeField]
     Transform orientation;
@@ -36,7 +35,16 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Maa tsekki rivi
-        grounded = Physics.SphereCast(groundCheck.position, 0.3f, Vector3.down, out RaycastHit hit, 0.4f, whatIsGround);
+        grounded = Physics.SphereCast(transform.position, 0.25f, Vector3.down, out RaycastHit hit, 1.0f, whatIsGround);
+        if (grounded)
+        {
+            Debug.Log("Maassa");
+        }
+        else 
+        {
+            Debug.Log("Ilmassa");
+        }
+        
 
         // Function calling
         myInput();
@@ -51,10 +59,6 @@ public class PlayerMovement : MonoBehaviour
             rb.linearDamping = 0f;
         }
 
-        if (grounded)
-        {
-            Debug.Log("Toimii");
-        }
     }
 
     private void FixedUpdate()

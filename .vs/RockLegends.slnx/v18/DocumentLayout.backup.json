@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\RockLegends\\RockLegends\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\rocklegends\\rocklegends\\assets\\scripts\\playercontrol\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\rocklegends\\rocklegends\\assets\\scripts\\playercontrol\\mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol\\mousecontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\rocklegends\\rocklegends\\assets\\scripts\\playercontrol\\cameracontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontrol\\cameracontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|d:\\rocklegends\\rocklegends\\assets\\scripts\\blocks\\blockplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B4CD19DA-EE08-5225-FB19-1D0DFA4113DD}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blocks\\blockplacer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BlockPlacer.cs",
+              "DocumentMoniker": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\Blocks\\BlockPlacer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Blocks\\BlockPlacer.cs",
+              "ToolTip": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\Blocks\\BlockPlacer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Blocks\\BlockPlacer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T16:38:49.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CameraControl.cs",
+              "DocumentMoniker": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "ToolTip": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl\\CameraControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T16:37:53.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MouseControl.cs",
+              "DocumentMoniker": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "ToolTip": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl\\MouseControl.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T16:26:19.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "ToolTip": "D:\\RockLegends\\RockLegends\\Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControl\\PlayerMovement.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-18T16:23:26.69Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
