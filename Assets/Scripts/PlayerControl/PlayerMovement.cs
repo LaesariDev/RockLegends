@@ -1,11 +1,15 @@
+using JetBrains.Annotations;
 using System;
+using System.Collections;
+using System.ComponentModel.Design;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
-    public float moveSpeed;
+    private float moveSpeed;
     public float groundDrag;
     public float jumpForce;
     public float airMultiplier = 0.4f;
@@ -17,9 +21,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     Transform orientation;
+    [SerializeField]
+    Camera mainCam;
 
     float horizontalInput;
     float verticalInput;
+
+    bool isSprinting = false;
 
     Vector3 moveDir;
     Rigidbody rb;
@@ -29,26 +37,20 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        
     }
 
     
     private void Update()
     {
         // Maa tsekki rivi
-        grounded = Physics.SphereCast(transform.position, 0.25f, Vector3.down, out RaycastHit hit, 1.0f, whatIsGround);
-        if (grounded)
-        {
-            Debug.Log("Maassa");
-        }
-        else 
-        {
-            Debug.Log("Ilmassa");
-        }
+        grounded = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out RaycastHit hit, 0.75f, whatIsGround);
         
 
         // Function calling
         myInput();
         SpeedControl();
+        Sprinttaus();
 
         if (grounded)
         {
@@ -114,6 +116,52 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Sprinttaus()
+    {
+        // CTRL Chekki
+        if(Input.GetKey(KeyCode.LeftControl))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
+
+        // Nopeuden muutos sprintatessa
+        if(isSprinting)
+        {
+            moveSpeed = 6.5f;
+            StartCoroutine(FovChange(80));
+        }
+        else
+        {
+            moveSpeed = 3.5f;
+            //StartCoroutine(FovChange(70));
+        }
+
+    }
+
+    private IEnumerator FovChange(float newFow)
+    {
+        float oldFov = mainCam.fieldOfView;
+
+        while(oldFov > newFow)
+        {
+            newFow++;
+            yield return new WaitForSeconds(0.5f);
+            
+        }
+
+        //while (oldFov > newFow)
+        //{
+        //    newFow--;
+        //    yield return new WaitForSeconds(0.05f);
+       // }
+
+        mainCam.fieldOfView = newFow;
+    }
+
 
     // Hyppy funktio
     private void Jump()
@@ -122,5 +170,7 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
+
+
 
 }
