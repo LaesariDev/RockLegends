@@ -44,13 +44,13 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Maa tsekki rivi
-        grounded = Physics.SphereCast(transform.position, 0.5f, Vector3.down, out RaycastHit hit, 0.75f, whatIsGround);
+        grounded = Physics.SphereCast(transform.position, 0.4f, Vector3.down, out RaycastHit hit, 0.75f, whatIsGround);
         
 
         // Function calling
         myInput();
         SpeedControl();
-        Sprinttaus();
+        
 
         if (grounded)
         {
@@ -66,6 +66,12 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         movePlayer();
+    }
+
+    private void LateUpdate()
+    {
+        Sprinttaus();
+        Crouch();
     }
 
 
@@ -118,8 +124,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Sprinttaus()
     {
+        float targetFov;
+
         // CTRL Chekki
-        if(Input.GetKey(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             isSprinting = true;
         }
@@ -132,34 +140,41 @@ public class PlayerMovement : MonoBehaviour
         if(isSprinting)
         {
             moveSpeed = 6.5f;
-            StartCoroutine(FovChange(80));
+            targetFov = 80f;
         }
         else
         {
             moveSpeed = 3.5f;
-            //StartCoroutine(FovChange(70));
+            targetFov = 70f;
         }
+
+        mainCam.fieldOfView = Mathf.Lerp(
+        mainCam.fieldOfView,
+        targetFov,
+        Time.deltaTime * 10f
+   );
 
     }
 
-    private IEnumerator FovChange(float newFow)
+    private void Crouch()
     {
-        float oldFov = mainCam.fieldOfView;
+        bool isCrouching = false;
 
-        while(oldFov > newFow)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
-            newFow++;
-            yield return new WaitForSeconds(0.5f);
+            isCrouching = true;
+        }
+        else
+        {
+            isCrouching = false;
+        }
+
+
+        if (isCrouching)
+        {
             
         }
 
-        //while (oldFov > newFow)
-        //{
-        //    newFow--;
-        //    yield return new WaitForSeconds(0.05f);
-       // }
-
-        mainCam.fieldOfView = newFow;
     }
 
 
