@@ -45,7 +45,16 @@ public class PlayerMovement : MonoBehaviour
     {
         // Maa tsekki rivi
         grounded = Physics.SphereCast(transform.position, 0.4f, Vector3.down, out RaycastHit hit, 0.75f, whatIsGround);
-        
+
+        if (grounded)
+        {
+            Debug.Log("Groundaus");
+        }
+        else
+        {
+            Debug.Log("EI groundattu");
+        }
+         
 
         // Function calling
         myInput();
