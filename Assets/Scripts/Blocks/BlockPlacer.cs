@@ -30,9 +30,13 @@ public class BlockPlacer : MonoBehaviour
                 Mathf.Round(placePos.y),
                 Mathf.Round(placePos.z)
             );
-            GameObject newBlock = null;
-            newBlock = Instantiate(blockPrefab, placePos, Quaternion.identity);
-            newBlock.transform.SetParent(blockParent);
+            
+            if (Mathf.Round(transform.position.y) && Mathf.Round(transform.position.x) && Mathf.Round(transform.position.z)  != placePos)
+            {
+                GameObject newBlock = null;
+                newBlock = Instantiate(blockPrefab, placePos, Quaternion.identity);
+                newBlock.transform.SetParent(blockParent);
+            }
         }
     }
 
