@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     Transform orientation;
     [SerializeField]
     Camera mainCam;
+    [SerializeField] Transform groundCheckTrans;
 
     float horizontalInput;
     float verticalInput;
@@ -40,20 +41,24 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    public float radius;
+    public float maxDist;
+
     
     private void Update()
     {
         // Maa tsekki rivi
-        grounded = Physics.SphereCast(transform.position, 0.4f, Vector3.down, out RaycastHit hit, 0.75f, whatIsGround);
+        grounded = Physics.SphereCast(groundCheckTrans.position, radius, Vector3.down, out RaycastHit hit, maxDist, whatIsGround);
 
-        if (grounded)
+        if(grounded)
         {
-            Debug.Log("Groundaus");
+            Debug.Log("Joo");
         }
         else
         {
-            Debug.Log("EI groundattu");
+            Debug.Log("Ei");
         }
+    
          
 
         // Function calling
@@ -153,7 +158,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            moveSpeed = 3.5f;
+            moveSpeed = 4f;
             targetFov = 70f;
         }
 

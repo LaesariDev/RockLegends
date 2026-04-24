@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &10644434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10644435}
+  m_Layer: 2
+  m_Name: groundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &10644435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10644434}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9375, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1395680930}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &15426734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4514318798629914855, guid: c28e2dfb7d3ab64479f3ac350d926783, type: 3}
@@ -508,6 +539,7 @@ MonoBehaviour:
   reachDistance: 5
   blockPrefab: {fileID: 2491170616893873193, guid: c28e2dfb7d3ab64479f3ac350d926783, type: 3}
   blockParent: {fileID: 569485215}
+  playerCol: {fileID: 1395680931}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1144,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 10644435}
   m_Father: {fileID: 1061087171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1395680931
@@ -1205,7 +1238,7 @@ Rigidbody:
   serializedVersion: 5
   m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.02
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1235,14 +1268,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   groundDrag: 10
-  jumpForce: 14
-  airMultiplier: 0.05
+  jumpForce: 13.5
+  airMultiplier: 0.02
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 1858607126}
   mainCam: {fileID: 330585545}
+  groundCheckTrans: {fileID: 10644435}
+  radius: 0.22
+  maxDist: 0.3
 --- !u!65 &1395680936
 BoxCollider:
   m_ObjectHideFlags: 0

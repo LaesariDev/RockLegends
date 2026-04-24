@@ -5,6 +5,7 @@ public class BlockPlacer : MonoBehaviour
     public float reachDistance = 5f;
     [SerializeField] GameObject blockPrefab;
     [SerializeField] Transform blockParent;
+    [SerializeField] Collider playerCol;
 
     private void LateUpdate()
     {
@@ -23,20 +24,24 @@ public class BlockPlacer : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, reachDistance))
         {
-            Vector3 placePos = hit.point + hit.normal * 0.5f;
+            Vector3Int hitBlockPos = Vector3Int.RoundToInt(hit.point - hit.normal * 0.5f);
+            Vector3Int placePos = hitBlockPos + Vector3Int.RoundToInt(hit.normal);
 
-            placePos = new Vector3(
-                Mathf.Round(placePos.x),
-                Mathf.Round(placePos.y),
-                Mathf.Round(placePos.z)
-            );
-            
-            if (Mathf.Round(transform.position.y) && Mathf.Round(transform.position.x) && Mathf.Round(transform.position.z)  != placePos)
+            Bounds player = playerCol.bounds;
+
+            Bounds blockBounds = new Bounds(placePos, Vector3.one);
+
+            // Estä placeaminen vain jos blokki on pelaajan tasolla tai ylempänä
+            if (placePos.y >= player.min.y)
             {
-                GameObject newBlock = null;
+                if (blockBounds.Intersects(player))
+                    return;
+            }
+
+            GameObject newBlock = null;
                 newBlock = Instantiate(blockPrefab, placePos, Quaternion.identity);
                 newBlock.transform.SetParent(blockParent);
-            }
+            
         }
     }
 
